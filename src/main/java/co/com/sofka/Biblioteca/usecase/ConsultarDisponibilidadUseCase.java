@@ -18,8 +18,8 @@ import java.util.function.Function;
 public class ConsultarDisponibilidadUseCase implements Function<String, Mono<RespuestaRecursoDTO>> {
 
     private final RepositorioRecurso repositorioRecurso;
-    private RecursoMapper recursoMapper = new RecursoMapper();
-    private RespuestaRecursoMapper respuestaRecursoMapper = new RespuestaRecursoMapper();
+    private final RecursoMapper recursoMapper = new RecursoMapper();
+    private final RespuestaRecursoMapper respuestaRecursoMapper = new RespuestaRecursoMapper();
 
     @Autowired
     public ConsultarDisponibilidadUseCase(RepositorioRecurso repositorioRecurso) {

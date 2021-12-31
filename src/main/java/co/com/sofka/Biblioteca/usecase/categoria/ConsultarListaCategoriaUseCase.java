@@ -10,12 +10,12 @@ import reactor.core.publisher.Flux;
 
 @Service
 @Validated
-public class ConsultarCategoriaUseCase implements ConsultarCategoria {
+public class ConsultarListaCategoriaUseCase implements ConsultarCategoria {
 
     private final RepositorioCategoria repositorioCategoria;
     private final CategoriaMapper categoriaMapper;
 
-    public ConsultarCategoriaUseCase(RepositorioCategoria repositorioCategoria, CategoriaMapper categoriaMapper) {
+    public ConsultarListaCategoriaUseCase(RepositorioCategoria repositorioCategoria, CategoriaMapper categoriaMapper) {
         this.repositorioCategoria = repositorioCategoria;
         this.categoriaMapper = categoriaMapper;
     }

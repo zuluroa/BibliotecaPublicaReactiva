@@ -1,9 +1,9 @@
 package co.com.sofka.Biblioteca.usecase.recurso.interfaz;
 
 import co.com.sofka.Biblioteca.dtos.RecursoDTO;
-import reactor.core.publisher.Mono;
+import reactor.core.publisher.Flux;
 
 @FunctionalInterface
-public interface CrearRecurso {
-    Mono<RecursoDTO> apply(RecursoDTO recursoDTO);
+public interface ListaRecurso {
+    Flux<RecursoDTO> get();
 }

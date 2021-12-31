@@ -11,13 +11,13 @@ import reactor.core.publisher.Mono;
 
 @Service
 @Validated
-public class CasoUsoCrearTipoRecurso implements CrearTipoServicio {
+public class CrearTipoRecursoUseCase implements CrearTipoServicio {
 
     private final RepositorioTipoRecurso repositorioTipoRecurso;
     private final TipoRecursoMapper tipoRecursoMapper;
 
     @Autowired
-    public CasoUsoCrearTipoRecurso(RepositorioTipoRecurso repositorioTipoRecurso, TipoRecursoMapper tipoRecursoMapper) {
+    public CrearTipoRecursoUseCase(RepositorioTipoRecurso repositorioTipoRecurso, TipoRecursoMapper tipoRecursoMapper) {
         this.repositorioTipoRecurso = repositorioTipoRecurso;
         this.tipoRecursoMapper = tipoRecursoMapper;
     }

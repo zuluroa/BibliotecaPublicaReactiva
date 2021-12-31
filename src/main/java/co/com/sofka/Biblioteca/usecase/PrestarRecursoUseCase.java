@@ -17,11 +17,11 @@ import java.util.Date;
 public class PrestarRecursoUseCase {
 
     private final RepositorioRecurso repositorioRecurso;
-    private Date objDate = new Date();
-    private String strDateFormat = "hh: mm: ss a dd-MMM-aaaa";
-    private SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
-    private RecursoMapper recursoMapper = new RecursoMapper();
-    private RespuestaRecursoMapper respuestaRecursoMapper = new RespuestaRecursoMapper();
+    private final Date objDate = new Date();
+    private final String strDateFormat = "hh: mm: ss a dd-MMM-aaaa";
+    private final SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
+    private final RecursoMapper recursoMapper = new RecursoMapper();
+    private final RespuestaRecursoMapper respuestaRecursoMapper = new RespuestaRecursoMapper();
 
     @Autowired
     public PrestarRecursoUseCase(RepositorioRecurso repositorioRecurso, RecursoMapper recursoMapper) {

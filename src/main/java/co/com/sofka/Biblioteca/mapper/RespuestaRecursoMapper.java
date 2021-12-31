@@ -10,9 +10,9 @@ import java.util.function.Function;
 
 @Component
 public class RespuestaRecursoMapper {
-    private Date objDate = new Date();
-    private String strDateFormat = "hh: mm: ss a dd-MMM-aaaa";
-    private SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
+    private final Date objDate = new Date();
+    private final String strDateFormat = "hh: mm: ss a dd-MMM-aaaa";
+    private final SimpleDateFormat objSDF = new SimpleDateFormat(strDateFormat);
 
     public Function<RecursoDTO, RespuestaRecursoDTO> consultarRecurso() {
         return recurso -> {
@@ -20,7 +20,7 @@ public class RespuestaRecursoMapper {
             String descripcion = recurso.getDisponible() ? "El recurso esta disponible" : "El Libro no esta disponible";
             respuestaRecursoDTO.setDescripcion(descripcion);
             respuestaRecursoDTO.setDisponible(recurso.getDisponible());
-            respuestaRecursoDTO.setFecha(recurso.getFecha().toString());
+            respuestaRecursoDTO.setFecha(recurso.getFecha());
             return respuestaRecursoDTO;
         };
     }
@@ -31,7 +31,7 @@ public class RespuestaRecursoMapper {
             String descripcion = "";
             respuestaRecursoDTO.setDescripcion(descripcion);
             respuestaRecursoDTO.setDisponible(recurso.getDisponible());
-            respuestaRecursoDTO.setFecha(recurso.getFecha().toString());
+            respuestaRecursoDTO.setFecha(recurso.getFecha());
             return respuestaRecursoDTO;
         };
 
