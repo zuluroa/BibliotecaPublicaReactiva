@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor user
+user -> Interfaz: Crear recurso
+Interfaz --> Servidor: Envíar la solicitud
+database Mongo
+Servidor  --> Mongo: Guardar el recurso
+Servidor  --> Interfaz: Devuelver el recurso
+Interfaz --> user: Mostrar el recurso creado
+@enduml

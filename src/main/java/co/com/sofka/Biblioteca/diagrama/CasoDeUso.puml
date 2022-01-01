@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor User as user
+note left of user : Usuario que gestiona los recursos en la biblioteca.
+
+package GestionarRecursos{
+usecase "Consultar disponibilidad de recursos" as UseCase1
+usecase "Prestar recurso" as UseCase2
+usecase "Devolver recurso" as UseCase3
+usecase "Recomendar recurso" as UseCase4
+}
+
+
+user --> UseCase1
+user --> UseCase2
+user --> UseCase3
+user --> UseCase4
+@enduml
